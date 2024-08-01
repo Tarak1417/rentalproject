@@ -8,7 +8,6 @@ const ShopCategory = (props) => {
     const { all_product } = useContext(Shopcontext);
     const [sortOption, setSortOption] = useState("default");
 
-    // Sorting function
     const sortProducts = (products, option) => {
         switch (option) {
             case "price-asc":
@@ -24,7 +23,6 @@ const ShopCategory = (props) => {
         }
     };
 
-    // Filter and sort products
     const filteredProducts = all_product.filter(item => props.category === item.category);
     const sortedProducts = sortProducts(filteredProducts, sortOption);
 
